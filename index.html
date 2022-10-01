@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+
+<body>
+  <main>
+    <header>
+      <div class="title">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+      <div class="box">
+        <p>score</p>
+        <p id="currentScore">0</p>
+      </div>
+    </header>
+
+  
+    <div class="content">
+      <div class="wrapImg">
+        <img class="bgTriangle" src="./images/bg-triangle.svg" alt="">
+      <div id="imgPaper" class="imgPaper">
+        <img id="paper" src="./images/icon-paper.svg" alt="icon paper">
+      </div>
+      <div id="imgScissors" class="imgScissors">
+        <img id="scissors" src="./images/icon-scissors.svg" alt="icon scissors">
+      </div>
+      <div id="imgRock" class="imgRock">
+        <img id="rock" src="./images/icon-rock.svg" alt="icon rock">
+      </div>
+      </div>
+    </div>
+  
+    <div class="step2">
+      <div class="wrap">
+      <div class="yourPick">
+        <div id="youPicked"></div>
+        <p>you picked</p>
+      </div>
+     
+      <div class="housePick">
+        <div id="houseShadow" class="houseShadow"></div>
+        <div id="housePicked"></div>
+        <p>the house picked</p>
+      </div>
+      </div>
+
+      <div class="stepFour">
+        <div id="result" class="result"></div>
+        <button id="playAgain" class="btnPlayAgain" type="button"> play again</button>
+      </div>
+    </div>
+
+
+    <div class="rules">
+      <button class="btnOpen" type="button">rules</button>
+    </div>
+
+
+     <div class="popup">
+        <h2>rules</h2>
+        <img src="./images/image-rules.svg" alt="rock paper scissors rules">
+        <button id="btnClosePopup" type="button"><img id="closePopup" src="./images/icon-close.svg" alt="icon close"></button>
+     </div>
+  
+
+
+  
+
+
+
+
+
+
+
+  </main>
+<script src="app.js"></script>
+</body>
+</html>
