@@ -479,8 +479,17 @@ header {
 
 @media screen and (min-width: 1024px) {
 
+    main {
+        justify-content: flex-start;
+    }
+
+    .content {
+        margin-top: 15rem;
+    }
+
     .wrap {
         gap: 7rem;
+        margin-top: 10rem;
     }
 
     .wrap.active {
