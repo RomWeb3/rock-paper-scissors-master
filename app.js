@@ -32,6 +32,7 @@ const userShadow = document.getElementById('userShadow');
 const btnPlayAgain = document.getElementById('playAgain');
 const main = document.querySelector('main');
 const btnOpen = document.querySelector('.btnOpen');
+const wrap = document.getElementById('wrap');
 let userChoice = '';
 let houseChoice = '';
 
@@ -106,6 +107,7 @@ let houseChoice = '';
         setTimeout(() => {
 
             stepFour.classList.add('active');
+            wrap.classList.add('active');
 
         if (userChoice === 'paper' && houseChoice === 'rock') {
             result.innerText = 'you win';
@@ -181,6 +183,7 @@ let houseChoice = '';
             main.style.gap = '';
             result.innerText = '';
             stepFour.classList.remove('active');
+            wrap.classList.remove('active');
             houseShadow.classList.remove('active');
             userShadow.classList.remove('active');
         })

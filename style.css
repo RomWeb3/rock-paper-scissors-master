@@ -480,8 +480,13 @@ header {
 @media screen and (min-width: 1024px) {
 
     .wrap {
+        gap: 7rem;
+    }
+
+    .wrap.active {
         gap: 35rem;
     }
+
     .stepFour {
         margin-top: -25rem;
     }
