@@ -220,6 +220,12 @@ header {
     justify-content: flex-start;
 }
 
+.housePick {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
 .userShadow {
     height: 11rem;
     width: 11rem;
@@ -248,14 +254,6 @@ header {
     position: relative;
 }
 
-.txt {
-    position: absolute;
-    top: 13.45rem;
-    right: 0;
-    left: 0;
-    margin: auto;
-}
-
 .stepTwo {
     position: static;
 }
@@ -268,6 +266,7 @@ header {
     position: absolute;
     margin-top: 1.15rem;
     margin-left: 0.9rem;
+    top: 0;
     z-index: -1;
 }
 
@@ -429,37 +428,62 @@ header {
         gap: 7rem;
     }
 
+    .yourPick {
+        flex-direction: column-reverse;
+    }
+
+    .housePick {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .step2 p {
-        font-size: 2.5rem;
+        font-size: 2.49rem;
+        margin: 0 0 2rem 0;
     }
 
-    #youPicked {
-        width: 19rem;
-        height: 19rem;
-        border: 22px solid hsl(230, 89%, 62%);
-        top: -9.5rem;
-        left: -9.5rem;
-        box-shadow: inset 1px 7px 0px 0px rgba(0, 0, 0, 0.147);
+    .txt {
+        position: static;
     }
 
-    #housePicked {
-        width: 19rem;
-        height: 19rem;
-        border: 22px solid hsl(230, 89%, 62%);
-        top: -9.5rem;
-        left: -9.5rem;
-        box-shadow: inset 1px 7px 0px 0px rgba(0, 0, 0, 0.147);
+    .houseShadow {
+        height: 17rem;
+        width: 17rem;
+        margin-top: 6.5rem;
+        margin-left: 0.95rem;
+    }
+
+    .houseShadow.active {
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.05), 0 0 0 100px rgba(255, 255, 255, 0.04), 0 0 0 150px rgba(255, 255, 255, 0.03);
+    }
+
+    .userShadow {
+        height: 17rem;
+        width: 17rem;
+        margin-bottom: 1rem;
+        margin-left: 0.95rem;
+    }
+
+    .userShadow.active {
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.05), 0 0 0 100px rgba(255, 255, 255, 0.04), 0 0 0 150px rgba(255, 255, 255, 0.03);
     }
 
     .btnPlayAgain:hover {
         color: #b3314a;
         cursor: pointer;
     }
+
+   
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 
-
+    .wrap {
+        gap: 35rem;
+    }
+    .stepFour {
+        margin-top: -25rem;
+    }
 
 }

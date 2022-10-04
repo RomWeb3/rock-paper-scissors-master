@@ -66,7 +66,6 @@ let houseChoice = '';
         stepTwo.style.display = 'block';
         main.style.gap = '9rem';
         btnOpen.style.marginTop = '-5rem';
-        yourPick.style.borderColor = 'hsl(349, 71%, 52%)';
         yourPick.innerHTML = '<div id="imgRock" class="imgRock stepTwo"><img id="rock" src="./images/icon-rock.svg" alt="icon rock"></div>';
         generateHouseChoice();
         generateResult();
@@ -75,7 +74,7 @@ let houseChoice = '';
 
 
 
-    // House Pick + Build the game logic
+    // House Pick + Game logic
 
     const result = document.getElementById('result');
     let currentScore = document.getElementById('currentScore');
