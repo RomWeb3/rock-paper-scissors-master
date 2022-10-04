@@ -24,7 +24,7 @@ const rock = document.getElementById('rock');
 const imgRock = document.getElementById('imgRock');
 const stepOne = document.querySelector('.content');
 const stepTwo = document.querySelector('.step2');
-const stepFour = document.querySelector('.step4');
+const stepFour = document.querySelector('.stepFour');
 const yourPick = document.getElementById('youPicked');
 const housePick = document.getElementById('housePicked');
 const houseShadow = document.getElementById('houseShadow');
@@ -35,23 +35,13 @@ let userChoice = '';
 let houseChoice = '';
 
 
-    const paperUser = paper.cloneNode(true);
-    const scissorsUser = scissors.cloneNode(true);
-    const rockUser = rock.cloneNode(true);
-    const paperHouse = paper.cloneNode(true);
-    const scissorsHouse = scissors.cloneNode(true);
-    const rockHouse = rock.cloneNode(true);
-    
-
-
     imgPaper.addEventListener('click', () => {
         userChoice = 'paper';
         stepOne.classList.add('step1');
         stepTwo.style.display = 'block';
         main.style.gap = '9rem';
         btnOpen.style.marginTop = '-5rem';
-        yourPick.style.borderColor = 'hsl(230, 89%, 62%)';
-        yourPick.appendChild(paperUser);
+        yourPick.innerHTML = '<div id="imgPaper" class="imgPaper stepTwo"><img id="paper" src="./images/icon-paper.svg" alt="icon paper"></div>';
         generateHouseChoice();
         generateResult();
         playAgain();
@@ -63,8 +53,7 @@ let houseChoice = '';
         stepTwo.style.display = 'block';
         main.style.gap = '9rem';
         btnOpen.style.marginTop = '-5rem';
-        yourPick.style.borderColor = 'hsl(39, 89%, 49%)';
-        yourPick.appendChild(scissorsUser);
+        yourPick.innerHTML = '<div id="imgScissors" class="imgScissors stepTwo"><img id="scissors" src="./images/icon-scissors.svg" alt="icon scissors"></div>';
         generateHouseChoice();
         generateResult();
         playAgain();
@@ -77,7 +66,7 @@ let houseChoice = '';
         main.style.gap = '9rem';
         btnOpen.style.marginTop = '-5rem';
         yourPick.style.borderColor = 'hsl(349, 71%, 52%)';
-        yourPick.appendChild(rockUser);
+        yourPick.innerHTML = '<div id="imgRock" class="imgRock stepTwo"><img id="rock" src="./images/icon-rock.svg" alt="icon rock"></div>';
         generateHouseChoice();
         generateResult();
         playAgain();
@@ -92,29 +81,34 @@ let houseChoice = '';
     let score = 0;
 
     function generateHouseChoice() {
-        const randomNumber = Math.floor(Math.random() * 3) + 1;
+        setTimeout(() => {
+            const randomNumber = Math.floor(Math.random() * 3) + 1;
         
         if (randomNumber === 1) {
             houseChoice = 'rock';
-            housePick.style.borderColor = 'hsl(349, 71%, 52%)';
-            housePick.appendChild(rockHouse);
+            housePick.innerHTML = '<div id="imgRock" class="imgRock stepTwo"><img id="rock" src="./images/icon-rock.svg" alt="icon rock"></div>';
         }
 
         if (randomNumber === 2) {
             houseChoice = 'paper';
             housePick.style.borderColor = 'hsl(230, 89%, 62%)';
-            housePick.appendChild(paperHouse);
+            housePick.innerHTML = '<div id="imgPaper" class="imgPaper stepTwo"><img id="paper" src="./images/icon-paper.svg" alt="icon paper"></div>';
         }
 
         if (randomNumber === 3) {
             houseChoice = 'scissors';
             housePick.style.borderColor = 'hsl(39, 89%, 49%)';
-            housePick.appendChild(scissorsHouse);
+            housePick.innerHTML = '<div id="imgScissors" class="imgScissors stepTwo"><img id="scissors" src="./images/icon-scissors.svg" alt="icon scissors"></div>';
         }
+        },1000);
+        
     }
 
     function generateResult() {
-            // user play with Paper
+        setTimeout(() => {
+
+            stepFour.classList.add('active');
+
         if (userChoice === 'paper' && houseChoice === 'rock') {
             result.innerText = 'you win';
             score++;
@@ -129,7 +123,6 @@ let houseChoice = '';
             if (score === 0) {return}
             score--;
             currentScore.innerHTML = score;
-            houseShadow.classList.add('active');
                    
         }
 
@@ -148,7 +141,6 @@ let houseChoice = '';
             if (score === 0) {return}
             score--;
             currentScore.innerHTML = score;
-            houseShadow.classList.add('active'); 
         }
 
             // user play with Rock
@@ -166,9 +158,8 @@ let houseChoice = '';
             if (score === 0) {return}
             score--;
             currentScore.innerHTML = score;
-            houseShadow.classList.add('active');
         }
-        
+        },1750);
     }
 
 
@@ -176,54 +167,11 @@ let houseChoice = '';
         btnPlayAgain.addEventListener('click', () => {
             stepOne.classList.remove('step1');
             stepTwo.style.display = 'none';
-            if (userChoice === 'paper' && houseChoice === 'paper') {
-            yourPick.removeChild(paperUser);
-            housePick.removeChild(paperHouse);
+            yourPick.innerHTML = '';
+            housePick.innerHTML = '';
             main.style.gap = '';
-            }
-            if (userChoice === 'scissors' && houseChoice === 'scissors') {
-            yourPick.removeChild(scissorsUser);
-            housePick.removeChild(scissorsHouse);
-            main.style.gap = '';
-            }
-            if (userChoice === 'rock' && houseChoice === 'rock') {
-            yourPick.removeChild(rockUser);
-            housePick.removeChild(rockHouse);
-            main.style.gap = '';
-            }
-            if (userChoice === 'paper' && houseChoice === 'rock') {
-            yourPick.removeChild(paperUser);
-            housePick.removeChild(rockHouse);
-            main.style.gap = '';
-            }
-            if (userChoice === 'paper' && houseChoice === 'scissors') {
-            yourPick.removeChild(paperUser);
-            housePick.removeChild(scissorsHouse);
-            main.style.gap = '';
-            houseShadow.classList.remove('active');
-            }
-            if (userChoice === 'scissors' && houseChoice === 'paper') {
-            yourPick.removeChild(scissorsUser);
-            housePick.removeChild(paperHouse);
-            main.style.gap = '';
-            }
-            if (userChoice === 'scissors' && houseChoice === 'rock') {
-            yourPick.removeChild(scissorsUser);
-            housePick.removeChild(rockHouse);
-            main.style.gap = '';
-            houseShadow.classList.remove('active');
-            }
-            if (userChoice === 'rock' && houseChoice === 'paper') {
-            yourPick.removeChild(rockUser);
-            housePick.removeChild(paperHouse);
-            main.style.gap = '';
-            houseShadow.classList.remove('active');
-            }
-            if (userChoice === 'rock' && houseChoice === 'scissors') {
-            yourPick.removeChild(rockUser);
-            housePick.removeChild(scissorsHouse);
-            main.style.gap = '';
-            }
+            result.innerText = '';
+            stepFour.classList.remove('active');
         })
     }
 
