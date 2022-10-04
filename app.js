@@ -28,6 +28,7 @@ const stepFour = document.querySelector('.stepFour');
 const yourPick = document.getElementById('youPicked');
 const housePick = document.getElementById('housePicked');
 const houseShadow = document.getElementById('houseShadow');
+const userShadow = document.getElementById('userShadow');
 const btnPlayAgain = document.getElementById('playAgain');
 const main = document.querySelector('main');
 const btnOpen = document.querySelector('.btnOpen');
@@ -82,7 +83,7 @@ let houseChoice = '';
 
     function generateHouseChoice() {
         setTimeout(() => {
-            const randomNumber = Math.floor(Math.random() * 3) + 1;
+        const randomNumber = Math.floor(Math.random() * 3) + 1;
         
         if (randomNumber === 1) {
             houseChoice = 'rock';
@@ -91,13 +92,11 @@ let houseChoice = '';
 
         if (randomNumber === 2) {
             houseChoice = 'paper';
-            housePick.style.borderColor = 'hsl(230, 89%, 62%)';
             housePick.innerHTML = '<div id="imgPaper" class="imgPaper stepTwo"><img id="paper" src="./images/icon-paper.svg" alt="icon paper"></div>';
         }
 
         if (randomNumber === 3) {
             houseChoice = 'scissors';
-            housePick.style.borderColor = 'hsl(39, 89%, 49%)';
             housePick.innerHTML = '<div id="imgScissors" class="imgScissors stepTwo"><img id="scissors" src="./images/icon-scissors.svg" alt="icon scissors"></div>';
         }
         },1000);
@@ -113,6 +112,7 @@ let houseChoice = '';
             result.innerText = 'you win';
             score++;
             currentScore.innerHTML = score;
+            userShadow.classList.add('active');
         }
         if (userChoice === 'paper' && houseChoice === 'paper') {
             result.innerText = "it's a draw";
@@ -123,6 +123,7 @@ let houseChoice = '';
             if (score === 0) {return}
             score--;
             currentScore.innerHTML = score;
+            houseShadow.classList.add('active');
                    
         }
 
@@ -131,6 +132,7 @@ let houseChoice = '';
             result.innerText = 'you win';
             score++;
             currentScore.innerHTML = score;
+            userShadow.classList.add('active');
         }
         if (userChoice === 'scissors' && houseChoice === 'scissors') {
             result.innerText = "it's a draw";
@@ -141,6 +143,7 @@ let houseChoice = '';
             if (score === 0) {return}
             score--;
             currentScore.innerHTML = score;
+            houseShadow.classList.add('active');
         }
 
             // user play with Rock
@@ -148,6 +151,7 @@ let houseChoice = '';
             result.innerText = 'you win';
             score++;
             currentScore.innerHTML = score;
+            userShadow.classList.add('active');
         }
         if (userChoice === 'rock' && houseChoice === 'rock') {
             result.innerText = "it's a draw";
@@ -158,9 +162,15 @@ let houseChoice = '';
             if (score === 0) {return}
             score--;
             currentScore.innerHTML = score;
+            houseShadow.classList.add('active');
         }
+
         },1750);
     }
+
+  
+       
+    
 
 
     function playAgain() {
@@ -172,6 +182,8 @@ let houseChoice = '';
             main.style.gap = '';
             result.innerText = '';
             stepFour.classList.remove('active');
+            houseShadow.classList.remove('active');
+            userShadow.classList.remove('active');
         })
     }
 

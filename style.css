@@ -180,8 +180,6 @@ header {
     align-items: center;
     justify-content: space-around;
     margin-top: -3rem;
-    transition: scale 0.9s ease-in-out;
-    overflow: hidden;
 }
 
 .popup h2 {
@@ -220,6 +218,21 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.userShadow {
+    height: 11rem;
+    width: 11rem;
+    background: #1a2946;
+    border-radius: 100px;
+    position: absolute;
+    margin-top: 1.15rem;
+    margin-left: 0.9rem;
+    z-index: -1;
+}
+
+.userShadow.active {
+    box-shadow: 0 0 0 25px #2c3d5e, 0 0 0 50px #273856, 0 0 0 80px #233656;
 }
 
 .step2 p {
