@@ -484,7 +484,8 @@ header {
     }
 
     .content {
-        margin-top: 15rem;
+        margin-top: 3vh
+
     }
 
     .wrap {
@@ -498,6 +499,14 @@ header {
 
     .stepFour {
         margin-top: -25rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px) and (min-height: 900px) {
+
+    .content {
+        margin-top: 8vh;
     }
 
 }
