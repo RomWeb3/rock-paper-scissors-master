@@ -43,7 +43,7 @@ let houseChoice = '';
         stepTwo.style.display = 'block';
         main.style.gap = '9rem';
         btnOpen.style.marginTop = '-5rem';
-        yourPick.innerHTML = '<div id="imgPaper" class="imgPaper stepTwo"><img id="paper" src="./images/icon-paper.svg" alt="icon paper"></div>';
+        yourPick.innerHTML = '<div id="imgPaper" class="imgPaper stepTwo"><img class="paperStep2" src="./images/icon-paper.svg" alt="icon paper"></div>';
         generateHouseChoice();
         generateResult();
         playAgain();
@@ -55,7 +55,7 @@ let houseChoice = '';
         stepTwo.style.display = 'block';
         main.style.gap = '9rem';
         btnOpen.style.marginTop = '-5rem';
-        yourPick.innerHTML = '<div id="imgScissors" class="imgScissors stepTwo"><img id="scissors" src="./images/icon-scissors.svg" alt="icon scissors"></div>';
+        yourPick.innerHTML = '<div id="imgScissors" class="imgScissors stepTwo"><img class="paperStep2" src="./images/icon-scissors.svg" alt="icon scissors"></div>';
         generateHouseChoice();
         generateResult();
         playAgain();
@@ -67,7 +67,7 @@ let houseChoice = '';
         stepTwo.style.display = 'block';
         main.style.gap = '9rem';
         btnOpen.style.marginTop = '-5rem';
-        yourPick.innerHTML = '<div id="imgRock" class="imgRock stepTwo"><img id="rock" src="./images/icon-rock.svg" alt="icon rock"></div>';
+        yourPick.innerHTML = '<div id="imgRock" class="imgRock stepTwo"><img class="paperStep2" src="./images/icon-rock.svg" alt="icon rock"></div>';
         generateHouseChoice();
         generateResult();
         playAgain();
@@ -87,17 +87,17 @@ let houseChoice = '';
         
         if (randomNumber === 1) {
             houseChoice = 'rock';
-            housePick.innerHTML = '<div id="imgRock" class="imgRock stepTwo"><img id="rock" src="./images/icon-rock.svg" alt="icon rock"></div>';
+            housePick.innerHTML = '<div id="imgRock" class="imgRock stepTwo"><img class="paperStep2" src="./images/icon-rock.svg" alt="icon rock"></div>';
         }
 
         if (randomNumber === 2) {
             houseChoice = 'paper';
-            housePick.innerHTML = '<div id="imgPaper" class="imgPaper stepTwo"><img id="paper" src="./images/icon-paper.svg" alt="icon paper"></div>';
+            housePick.innerHTML = '<div id="imgPaper" class="imgPaper stepTwo"><img class="paperStep2" src="./images/icon-paper.svg" alt="icon paper"></div>';
         }
 
         if (randomNumber === 3) {
             houseChoice = 'scissors';
-            housePick.innerHTML = '<div id="imgScissors" class="imgScissors stepTwo"><img id="scissors" src="./images/icon-scissors.svg" alt="icon scissors"></div>';
+            housePick.innerHTML = '<div id="imgScissors" class="imgScissors stepTwo"><img class="paperStep2" src="./images/icon-scissors.svg" alt="icon scissors"></div>';
         }
         },1000);
         
@@ -113,7 +113,8 @@ let houseChoice = '';
             result.innerText = 'you win';
             score++;
             currentScore.innerHTML = score;
-            userShadow.classList.add('active');
+            yourPick.innerHTML = '<div id="imgPaper" class="imgPaper stepTwo active"><img class="paperStep2" src="./images/icon-paper.svg" alt="icon paper"></div>';
+
         }
         if (userChoice === 'paper' && houseChoice === 'paper') {
             result.innerText = "it's a draw";
@@ -124,8 +125,7 @@ let houseChoice = '';
             if (score === 0) {return}
             score--;
             currentScore.innerHTML = score;
-            houseShadow.classList.add('active');
-                   
+            housePick.innerHTML = '<div id="imgScissors" class="imgScissors stepTwo active"><img class="paperStep2" src="./images/icon-scissors.svg" alt="icon scissors"></div>';
         }
 
             // user play with Scissors
@@ -133,7 +133,7 @@ let houseChoice = '';
             result.innerText = 'you win';
             score++;
             currentScore.innerHTML = score;
-            userShadow.classList.add('active');
+            yourPick.innerHTML = '<div id="imgScissors" class="imgScissors stepTwo active"><img class="paperStep2" src="./images/icon-scissors.svg" alt="icon scissors"></div>';
         }
         if (userChoice === 'scissors' && houseChoice === 'scissors') {
             result.innerText = "it's a draw";
@@ -144,7 +144,9 @@ let houseChoice = '';
             if (score === 0) {return}
             score--;
             currentScore.innerHTML = score;
-            houseShadow.classList.add('active');
+            housePick.innerHTML = '<div id="imgRock" class="imgRock stepTwo active"><img class="paperStep2" src="./images/icon-rock.svg" alt="icon rock"></div>';
+
+            
         }
 
             // user play with Rock
@@ -152,7 +154,9 @@ let houseChoice = '';
             result.innerText = 'you win';
             score++;
             currentScore.innerHTML = score;
-            userShadow.classList.add('active');
+            yourPick.innerHTML = '<div id="imgRock" class="imgRock stepTwo active"><img class="paperStep2" src="./images/icon-rock.svg" alt="icon rock"></div>';
+
+            
         }
         if (userChoice === 'rock' && houseChoice === 'rock') {
             result.innerText = "it's a draw";
@@ -163,7 +167,7 @@ let houseChoice = '';
             if (score === 0) {return}
             score--;
             currentScore.innerHTML = score;
-            houseShadow.classList.add('active');
+            housePick.innerHTML = '<div id="imgPaper" class="imgPaper stepTwo active"><img class="paperStep2" src="./images/icon-paper.svg" alt="icon paper"></div>';
         }
 
         },1750);
@@ -184,8 +188,6 @@ let houseChoice = '';
             result.innerText = '';
             stepFour.classList.remove('active');
             wrap.classList.remove('active');
-            houseShadow.classList.remove('active');
-            userShadow.classList.remove('active');
         })
     }
 

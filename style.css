@@ -230,7 +230,7 @@ header {
     height: 11rem;
     width: 11rem;
     background: #1a2946;
-    border-radius: 100px;
+    border-radius: 50%;
     position: absolute;
     margin-top: 1.15rem;
     margin-left: 0.9rem;
@@ -262,7 +262,7 @@ header {
     height: 11rem;
     width: 11rem;
     background: #1a2946;
-    border-radius: 100px;
+    border-radius: 50%;
     position: absolute;
     margin-top: 1.15rem;
     margin-left: 0.9rem;
@@ -353,8 +353,8 @@ header {
     }
 
     .imgPaper {
-        width: 19rem;
-        height: 19rem;
+        width: 19.5rem;
+        height: 19.5rem;
         border: 22px solid hsl(230, 89%, 62%);
         top: -9.5rem;
         left: -9.5rem;
@@ -367,8 +367,8 @@ header {
     }
 
     .imgScissors {
-        width: 19rem;
-        height: 19rem;
+        width: 19.5rem;
+        height: 19.5rem;
         border: 22px solid hsl(39, 89%, 49%);
         top: -9.5rem;
         right: -9.5rem;
@@ -381,8 +381,8 @@ header {
     }
 
     .imgRock{
-        width: 19rem;
-        height: 19rem;
+        width: 19.5rem;
+        height: 19.5rem;
         border: 22px solid hsl(349, 71%, 52%);
         bottom: -8rem;
         box-shadow: inset 1px 7px 0px 0px rgba(0, 0, 0, 0.147), 0 5px #0000004d, 0 5px hsl(349, 71%, 52%);
@@ -451,6 +451,7 @@ header {
         width: 17rem;
         margin-top: 6.5rem;
         margin-left: 0.95rem;
+        background: #16213d;
     }
 
     .houseShadow.active {
@@ -490,15 +491,114 @@ header {
 
     .wrap {
         gap: 7rem;
-        margin-top: 10rem;
+        margin-top: -2rem;
     }
 
     .wrap.active {
-        gap: 35rem;
+        gap: 37rem;
+    }
+
+    .step2 p {
+        margin: 0 0 6rem 0;
+        letter-spacing: 0.25rem;
     }
 
     .stepFour {
-        margin-top: -25rem;
+        margin-top: -31rem;
+    }
+
+    .youPicked {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .housePick {
+        position: relative;
+    }
+
+    .houseShadow {
+        height: 23rem;
+        width: 23rem;
+        top: 12.1rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .houseShadow.active {
+        box-shadow: 0 0 0 90px rgba(255, 255, 255, 0.05), 0 0 0 160px rgba(255, 255, 255, 0.04), 0 0 0 240px rgba(255, 255, 255, 0.03);
+    }
+
+    .yourPick {
+        position: relative;
+    }
+
+    .userShadow {
+        height: 23rem;
+        width: 23rem;
+        top: 12.1rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .imgPaper.stepTwo {
+        height: 29rem;
+        width: 29rem;
+        border: 30px solid hsl(230, 89%, 62%);
+        border-radius: 50%;
+        box-shadow: inset 1px 12px 0px 0px rgba(0, 0, 0, 0.147), 0 10px #0000004d, 0 10px hsl(230, 89%, 65%);
+    }
+
+    .imgPaper.stepTwo.active::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        height: 29rem;
+        width: 29rem;
+        border-radius: 50%;
+        box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.05), 0 0 0 130px rgba(255, 255, 255, 0.04), 0 0 0 210px rgba(255, 255, 255, 0.03);
+    }
+
+   .paperStep2 {
+        scale: 2;
+    }
+
+    .imgScissors.stepTwo {
+        height: 29rem;
+        width: 29rem;
+        border: 30px solid hsl(39, 89%, 49%);
+        border-radius: 50%;
+        box-shadow: inset 1px 12px 0px 0px rgba(0, 0, 0, 0.147), 0 10px #0000004d, 0 10px hsl(39, 89%, 49%);
+    }
+
+    .imgScissors.stepTwo.active::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        height: 29rem;
+        width: 29rem;
+        border-radius: 50%;
+        box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.05), 0 0 0 130px rgba(255, 255, 255, 0.04), 0 0 0 210px rgba(255, 255, 255, 0.03);
+    }
+
+    .imgRock.stepTwo {
+        height: 29rem;
+        width: 29rem;
+        border: 30px solid hsl(349, 71%, 52%);
+        border-radius: 50%;
+        box-shadow: inset 1px 12px 0px 0px rgba(0, 0, 0, 0.147), 0 10px #0000004d, 0 10px hsl(349, 71%, 52%);
+    }
+
+    .imgRock.stepTwo.active::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        height: 29rem;
+        width: 29rem;
+        border-radius: 50%;
+        box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.05), 0 0 0 130px rgba(255, 255, 255, 0.04), 0 0 0 210px rgba(255, 255, 255, 0.03);
     }
 
 }
@@ -506,7 +606,7 @@ header {
 @media screen and (min-width: 1024px) and (min-height: 900px) {
 
     .content {
-        margin-top: 8vh;
+        margin-top: 9vh;
     }
 
 }
