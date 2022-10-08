@@ -383,12 +383,8 @@ header {
     }
 
     .imgPaper.stepTwo.active::before {
-        content: '';
-        position: absolute;
-        z-index: -1;
         height: 19.5rem;
         width: 19.5rem;
-        border-radius: 50%;
         box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.05), 0 0 0 100px rgba(255, 255, 255, 0.04), 0 0 0 150px rgba(255, 255, 255, 0.03);
     }
 
@@ -402,12 +398,8 @@ header {
     }
 
     .imgScissors.stepTwo.active::before {
-        content: '';
-        position: absolute;
-        z-index: -1;
         height: 19.5rem;
         width: 19.5rem;
-        border-radius: 50%;
         box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.05), 0 0 0 100px rgba(255, 255, 255, 0.04), 0 0 0 150px rgba(255, 255, 255, 0.03);
     }
 
@@ -420,12 +412,8 @@ header {
     }
 
     .imgRock.stepTwo.active::before {
-        content: '';
-        position: absolute;
-        z-index: -1;
         height: 19.5rem;
         width: 19.5rem;
-        border-radius: 50%;
         box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.05), 0 0 0 100px rgba(255, 255, 255, 0.04), 0 0 0 150px rgba(255, 255, 255, 0.03);
     }
 
@@ -510,6 +498,14 @@ header {
         justify-content: flex-start;
     }
 
+    body {
+        background: rgb(31,55,86);
+        background: radial-gradient(circle at top, rgba(31,55,86,1) 26%, rgba(20,21,57,1) 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
     .content {
         margin-top: 3vh
 
@@ -565,12 +561,8 @@ header {
     }
 
     .imgPaper.stepTwo.active::before {
-        content: '';
-        position: absolute;
-        z-index: -1;
         height: 29rem;
         width: 29rem;
-        border-radius: 50%;
         box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.05), 0 0 0 130px rgba(255, 255, 255, 0.04), 0 0 0 210px rgba(255, 255, 255, 0.03);
     }
 
@@ -587,12 +579,8 @@ header {
     }
 
     .imgScissors.stepTwo.active::before {
-        content: '';
-        position: absolute;
-        z-index: -1;
         height: 29rem;
         width: 29rem;
-        border-radius: 50%;
         box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.05), 0 0 0 130px rgba(255, 255, 255, 0.04), 0 0 0 210px rgba(255, 255, 255, 0.03);
     }
 
@@ -605,12 +593,8 @@ header {
     }
 
     .imgRock.stepTwo.active::before {
-        content: '';
-        position: absolute;
-        z-index: -1;
         height: 29rem;
         width: 29rem;
-        border-radius: 50%;
         box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.05), 0 0 0 130px rgba(255, 255, 255, 0.04), 0 0 0 210px rgba(255, 255, 255, 0.03);
     }
 
