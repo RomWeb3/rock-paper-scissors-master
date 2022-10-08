@@ -122,7 +122,7 @@ let houseChoice = '';
         }
         if (userChoice === 'paper' && houseChoice === 'scissors') {
             result.innerText = 'you lose';
-            if (score === 0) {return}
+            if (score === 0) { return }
             score--;
             currentScore.innerHTML = score;
             housePick.innerHTML = '<div id="imgScissors" class="imgScissors stepTwo active"><img class="paperStep2" src="./images/icon-scissors.svg" alt="icon scissors"></div>';
@@ -141,7 +141,7 @@ let houseChoice = '';
         }
         if (userChoice === 'scissors' && houseChoice === 'rock') {
             result.innerText = 'you lose';
-            if (score === 0) {return}
+            if (score === 0) { return }
             score--;
             currentScore.innerHTML = score;
             housePick.innerHTML = '<div id="imgRock" class="imgRock stepTwo active"><img class="paperStep2" src="./images/icon-rock.svg" alt="icon rock"></div>';
@@ -164,7 +164,7 @@ let houseChoice = '';
         }
         if (userChoice === 'rock' && houseChoice === 'paper') {
             result.innerText = 'you lose';
-            if (score === 0) {return}
+            if (score === 0) { return }
             score--;
             currentScore.innerHTML = score;
             housePick.innerHTML = '<div id="imgPaper" class="imgPaper stepTwo active"><img class="paperStep2" src="./images/icon-paper.svg" alt="icon paper"></div>';
