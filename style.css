@@ -120,6 +120,16 @@ header {
     cursor: pointer;
 }
 
+.imgPaper.stepTwo.active::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 13.25rem;
+    width: 13.25rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.05), 0 0 0 45px rgba(255, 255, 255, 0.04), 0 0 0 75px rgba(255, 255, 255, 0.03);
+}
+
 .imgScissors {
     background: white;
     padding: 1.5rem;
@@ -135,6 +145,16 @@ header {
     justify-content: center;
     box-shadow: inset 1px 5px 0px 0px rgba(0, 0, 0, 0.147), 0 5px #0000004d, 0 5px hsl(39, 89%, 49%);
     cursor: pointer;
+}
+
+.imgScissors.stepTwo.active::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 13.25rem;
+    width: 13.25rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.05), 0 0 0 45px rgba(255, 255, 255, 0.04), 0 0 0 75px rgba(255, 255, 255, 0.03);
 }
 
 .imgRock {
@@ -154,6 +174,16 @@ header {
     justify-content: center;
     box-shadow: inset 1px 5px 0px 0px rgba(0, 0, 0, 0.147), 0 5px #0000004d, 0 5px hsl(349, 71%, 52%);
     cursor: pointer;
+}
+
+.imgRock.stepTwo.active::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 13.25rem;
+    width: 13.25rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.05), 0 0 0 45px rgba(255, 255, 255, 0.04), 0 0 0 75px rgba(255, 255, 255, 0.03);
 }
 
 
@@ -179,7 +209,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-top: -3rem;
+    margin-top: -2.5rem;
 }
 
 .popup h2 {
@@ -192,6 +222,7 @@ header {
     outline: none;
     background: none;
     cursor: pointer;
+    /* padding-bottom: 5rem; */
 }
 
 .popup.active {
@@ -226,21 +257,6 @@ header {
     justify-content: flex-end;
 }
 
-.userShadow {
-    height: 11rem;
-    width: 11rem;
-    background: #1a2946;
-    border-radius: 50%;
-    position: absolute;
-    margin-top: 1.15rem;
-    margin-left: 0.9rem;
-    z-index: -1;
-}
-
-.userShadow.active {
-    box-shadow: 0 0 0 25px #2c3d5e, 0 0 0 50px #273856, 0 0 0 80px #233656;
-}
-
 .step2 p {
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -269,11 +285,6 @@ header {
     top: 0;
     z-index: -1;
 }
-
-.houseShadow.active {
-    box-shadow: 0 0 0 25px #2c3d5e, 0 0 0 50px #273856, 0 0 0 80px #233656;
-}
-
 
 .step4 {
     display: none;
@@ -348,7 +359,17 @@ header {
         max-width: 27rem;
     }
 
+    .paperStep2 {
+        scale: 1.325;
+    }
+
     #paper {
+        scale: 1.325;
+    }
+    #scissors {
+        scale: 1.325;
+    }
+    #rock {
         scale: 1.325;
     }
 
@@ -359,11 +380,16 @@ header {
         top: -9.5rem;
         left: -9.5rem;
         box-shadow: inset 1px 7px 0px 0px rgba(0, 0, 0, 0.147), 0 5px #0000004d, 0 5px hsl(230, 89%, 65%);
-
     }
 
-    #scissors {
-        scale: 1.325;
+    .imgPaper.stepTwo.active::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        height: 19.5rem;
+        width: 19.5rem;
+        border-radius: 50%;
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.05), 0 0 0 100px rgba(255, 255, 255, 0.04), 0 0 0 150px rgba(255, 255, 255, 0.03);
     }
 
     .imgScissors {
@@ -375,9 +401,14 @@ header {
         box-shadow: inset 1px 7px 0px 0px rgba(0, 0, 0, 0.147), 0 5px #0000004d, 0 5px hsl(39, 89%, 49%);
     }
 
-
-    #rock {
-        scale: 1.325;
+    .imgScissors.stepTwo.active::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        height: 19.5rem;
+        width: 19.5rem;
+        border-radius: 50%;
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.05), 0 0 0 100px rgba(255, 255, 255, 0.04), 0 0 0 150px rgba(255, 255, 255, 0.03);
     }
 
     .imgRock{
@@ -386,6 +417,16 @@ header {
         border: 22px solid hsl(349, 71%, 52%);
         bottom: -8rem;
         box-shadow: inset 1px 7px 0px 0px rgba(0, 0, 0, 0.147), 0 5px #0000004d, 0 5px hsl(349, 71%, 52%);
+    }
+
+    .imgRock.stepTwo.active::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        height: 19.5rem;
+        width: 19.5rem;
+        border-radius: 50%;
+        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.05), 0 0 0 100px rgba(255, 255, 255, 0.04), 0 0 0 150px rgba(255, 255, 255, 0.03);
     }
 
     .btnOpen {
@@ -454,21 +495,6 @@ header {
         background: #16213d;
     }
 
-    .houseShadow.active {
-        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.05), 0 0 0 100px rgba(255, 255, 255, 0.04), 0 0 0 150px rgba(255, 255, 255, 0.03);
-    }
-
-    .userShadow {
-        height: 17rem;
-        width: 17rem;
-        margin-bottom: 1rem;
-        margin-left: 0.95rem;
-    }
-
-    .userShadow.active {
-        box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.05), 0 0 0 100px rgba(255, 255, 255, 0.04), 0 0 0 150px rgba(255, 255, 255, 0.03);
-    }
-
     .btnPlayAgain:hover {
         color: #b3314a;
         cursor: pointer;
@@ -526,21 +552,8 @@ header {
         margin: auto;
     }
 
-    .houseShadow.active {
-        box-shadow: 0 0 0 90px rgba(255, 255, 255, 0.05), 0 0 0 160px rgba(255, 255, 255, 0.04), 0 0 0 240px rgba(255, 255, 255, 0.03);
-    }
-
     .yourPick {
         position: relative;
-    }
-
-    .userShadow {
-        height: 23rem;
-        width: 23rem;
-        top: 12.1rem;
-        left: 0;
-        right: 0;
-        margin: auto;
     }
 
     .imgPaper.stepTwo {
